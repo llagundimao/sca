@@ -1,0 +1,44 @@
+{
+  "home": [
+    {
+      "description": "See How ScrapCATApp Works!",
+      "image": "https://www-test.scrapcatapp.com/images/YT.png",
+      "bgColor": "bg-yellow-400"
+    },
+    {
+      "description": "What is the ScrapCATApp Index!",
+      "image": "https://www-test.scrapcatapp.com/images/Graph.png",
+      "bgColor": "bg-purple-400"
+    },
+    {
+      "description": "Learn more about ScrapCATApp.com",
+      "image": "https://www-test.scrapcatapp.com/images/Learn%20more.png",
+      "bgColor": "bg-blue-400"
+    },
+    {
+      "description": "Signup for a New Account",
+      "image": "https://www-test.scrapcatapp.com/images/Create%20Acc.png",
+      "bgColor": "bg-green-400"
+    }
+  ],
+  "element": [
+    {
+      "name": "PLATINUM",
+      "value": "$1,046",
+      "status": "down",
+      "discrepancy": "-3"
+    },
+    {
+      "name": "PALLADIUM",
+      "value": "$1,439",
+      "status": "down",
+      "discrepancy": "-6"
+    },
+    {
+      "name": "RHODIUM",
+      "value": "$6,450",
+      "status": "up",
+      "discrepancy": "+250"
+    }
+  ]
+}
