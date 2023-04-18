@@ -88,16 +88,19 @@
   "buyer": [
     {
       "title": "Dashboard",
+      "key": "dashboard",
       "url": "/buyer/dashboard",
       "icon": "M10,20V14h4v6h5V12h3L12,3,2,12H5v8Z"
     },
     {
       "title": "SCA Market",
+      "key": "market",
       "url": "/buyer/market",
       "icon": "M20,4H4V6H20Zm1,10V12L20,7H4L3,12v2H4v6H14V14h4v6h2V14Zm-9,4H6V14h6Z"
     },
     {
       "title": "View/Edit Categories",
+      "key": "categories",
       "url": "/buyer/categories",
       "icon": "M20,2H4A2,2,0,0,0,2.01,4L2,22l4-4H20a2.006,2.006,0,0,0,2-2V4A2.006,2.006,0,0,0,20,2ZM6,14V11.53l6.88-6.88a.5.5,0,0,1,.71,0l1.77,1.77a.5.5,0,0,1,0,.71L8.47,14Zm12,0H10.5l2-2H18Z"
     },
@@ -108,21 +111,25 @@
     },
     {
       "title": "LOTS Won",
+      "key": "lots-won",
       "url": "/buyer/lots-won",
       "icon": "M19,3H14.82A2.988,2.988,0,0,0,9.18,3H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3ZM12,3a1,1,0,1,1-1,1A1,1,0,0,1,12,3ZM10,17,6,13l1.41-1.41L10,14.17l6.59-6.59L18,9Z"
     },
     {
       "title": "LOTS Not Won",
+      "key": "lots-not-won",
       "url": "/buyer/lots-not-won",
       "icon": "M19,3H14.82A2.988,2.988,0,0,0,9.18,3H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3ZM13,18H11V16h2Zm0-4H11V8h2ZM12,5a1,1,0,1,1,1-1A1,1,0,0,1,12,5Z"
     },
     {
       "title": "LOTS Bid Submitted",
+      "key": "submitted-bids",
       "url": "/buyer/submitted-bids",
       "icon": "M21,3,3,10.53v.98l6.84,2.65L12.48,21h.98Z"
     },
     {
       "title": "LOTS Pending",
+      "key": "lots-pending",
       "url": "lots-pending",
       "icon": "M12,2A10,10,0,1,0,22,12,10.029,10.029,0,0,0,12,2Zm4.2,14.2L11,13V7h1.5v5.2L17,14.9l-.8,1.3Z"
     },
