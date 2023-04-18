@@ -1,7 +1,11 @@
 import React from "react"
 import SCALink from "../../common/data/links.json"
+import { useParams } from "react-router-dom"
 
 const SideBar = () => {
+  const { accountType } = useParams();
+  const items = accountType === 'seller' ? SCALink.seller : SCALink.buyer || []
+
   return (
     <div className="w-full">
       <aside
@@ -11,7 +15,7 @@ const SideBar = () => {
       >
         <div className="overflow-y-auto py-5 px-3 h-full bg-white border-r border-gray-200 dark:bg-gray-800 dark:border-gray-700">
           <ul className="space-y-2">
-            {SCALink.buyer.map((l, i) => {
+            {items.map((l, i) => {
               return (
                 <li key={i}>
                   <a
@@ -31,7 +35,7 @@ const SideBar = () => {
                         id="ic_home_24px"
                         className="cls-1"
                         d={l.icon}
-                        transform="translate(-2 -3)"
+                        transform={`${l?.translate ? l.translate : 'translate(-2 -3)'}`}
                       ></path>
                     </svg>
                     <span className="ml-3 text-sm">{l.title}</span>

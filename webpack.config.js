@@ -6,9 +6,11 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: '/'
+    publicPath: '/',
+    clean: true
   },
   devServer: {
+    static: './dist',
     historyApiFallback: true,
     compress: true,
   },
