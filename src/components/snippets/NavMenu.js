@@ -108,7 +108,7 @@ const NavMenu = () => {
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="mobile-menu-2"
         >
-          <ul className="flex flex-col font-medium p-4 text-white md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col font-medium p-4 text-white md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:dark:bg-gray-900 dark:border-gray-700">
             {SCALinks.navMenu.map((m, i) => {
               return (
                 <li key={i} className="hover:border-b-4 border-white border-solid">
