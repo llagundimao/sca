@@ -12,7 +12,7 @@ module.exports = {
   devServer: {
     static: './dist',
     historyApiFallback: true,
-    compress: true,
+    compress: true
   },
   module: {
     rules: [
@@ -45,7 +45,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: '/index.html'
+      filename: 'index.html'
     })
   ]
 }
