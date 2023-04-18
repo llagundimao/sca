@@ -1,13 +1,20 @@
-import React from "react";
-import Login from "./pages/Login"
+import React from "react"
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  Outlet,
+  Link,
+  BrowserRouter
+} from "react-router-dom"
+import Pages from "./pages"
 
 function App() {
   return (
-    <>
-      {/* <Nav /> */}
-      {/* <SideMenu /> */}
-      <Login />
-    </>
+    <BrowserRouter>
+      <Pages />
+    </BrowserRouter>
   )
 }
 

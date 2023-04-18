@@ -5,8 +5,10 @@ import SCALogo from "../../common/assets/images/sca-logo.png"
 import HomeBG from "../../common/assets/images/sca-homepage-bg.jpg"
 import ImageWithDesc from "../../components/snippets/ImageWithDesc"
 import HomeLinks from "../../common/data/links.json"
+import { useNavigate } from "react-router-dom"
 
-const Login = () => {
+const Home = () => {
+  const navigate = useNavigate()
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -15,9 +17,10 @@ const Login = () => {
     event.preventDefault()
     console.log("Username:", username)
     console.log("Password:", password)
-    setIsLoading(true)
+    navigate('/account-select')
     setTimeout(() => {
       setIsLoading(false)
+      setIsLoading(true)
     }, 2000)
   }
 
@@ -185,4 +188,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Home

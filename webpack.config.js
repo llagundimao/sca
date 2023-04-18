@@ -6,7 +6,10 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: ''
+    publicPath: '/'
+  },
+  devServer: {
+    historyApiFallback: true
   },
   module: {
     rules: [
@@ -18,7 +21,12 @@ module.exports = {
           options: {
             presets: ["@babel/preset-env", "@babel/preset-react"]
           }
-        },
+        }
+      },
+      {
+        test: /\.(js|jsx)$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
       },
       {
         test: /\.css$/,
