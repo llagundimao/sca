@@ -10,18 +10,41 @@ const NavMenu = () => {
 
   return (
     <nav className="w-full bg-white border-gray-200 dark:bg-gray-900 shadow-md">
-      <div className="w-full bg-blue-500 flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center">
-          <img
-            src="https://www-test.scrapcatapp.com/images/SCAcom-Box-Logo.11%20Low%20Res.png"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
-          />
-        </a>
-        <div className="flex items-center md:order-2">
+      <div className="w-full bg-[#1da1f2] grid grid-cols-3 gap-4 p-4">
+        <div className="col-span-2 flex justify-items-start">
+          <a href="/" className="flex items-center">
+            <img
+              src="https://www-test.scrapcatapp.com/images/SCAcom-Box-Logo.11%20Low%20Res.png"
+              className="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+          </a>
+
+          <div className="mt-1" id="mobile-menu-2">
+            <ul className="flex text-white md:p-0 border border-gray-100 md:flex-row md:space-x-8 md:border-0 md:dark:bg-gray-900 dark:border-gray-700">
+              {SCALinks.navMenu.map((m, i) => {
+                return (
+                  <li key={i}>
+                    <a
+                      href={m.url}
+                      className="text-white hover:underline"
+                      // className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                      aria-current="page"
+                      style={{ width: "100px" }}
+                    >
+                      {m.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex justify-end">
           <button
             type="button"
-            className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            className="text-sm bg-gray-400 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="user-dropdown"
@@ -34,6 +57,7 @@ const NavMenu = () => {
               alt="user photo"
             />
           </button>
+
           {/* <!-- Dropdown menu --> */}
           <div
             className="z-50 hidden my-4 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -104,39 +128,9 @@ const NavMenu = () => {
             </svg>
           </button>
         </div>
-        <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          id="mobile-menu-2"
-        >
-          <ul className="flex flex-col font-medium p-4 text-white md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:dark:bg-gray-900 dark:border-gray-700">
-            {SCALinks.navMenu.map((m, i) => {
-              return (
-                <li key={i} className="hover:border-b-4 border-white border-solid">
-                  <a
-                    href={m.url}
-                    className="block text-center py-2 pl-3 pr-4 text-white rounded hover:border-b-4 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                    // className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                    aria-current="page"
-                    style={{ width: '100px' }}
-                  >
-                    {m.title}
-                  </a>
-                </li>
-              )
-            })}
-            {/* <li>
-              <a
-                href="/contact-us"
-                className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Contact Us
-              </a>
-            </li> */}
-          </ul>
-        </div>
       </div>
     </nav>
-  )
+  );
 }
 
 export default NavMenu
