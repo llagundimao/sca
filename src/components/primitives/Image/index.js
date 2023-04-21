@@ -1,10 +1,10 @@
 import React from "react"
 
-const Image = ({ src, srcset = null, alt, width = 'max-w-full', height = 'h-auto' }) => {
+const Image = ({ src, style, srcset = null, alt, width = 'max-w-full', height = 'h-auto' }) => {
   return (
     <img
       className={`${width} ${height}`}
-      style={{ margin: 'auto' }}
+      style={{ margin: 'auto', ...style }}
       src={src}
       alt={alt}
     ></img>

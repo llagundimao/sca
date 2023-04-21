@@ -2,6 +2,8 @@ import React from "react"
 
 const Button = (props) => {
   const {
+    form = '',
+    type="button",
     disabled,
     isLoading = false,
     text = "Button",
@@ -16,6 +18,8 @@ const Button = (props) => {
 
   return (
     <button
+      form={form}
+      type={type}
       disable={disabled}
       className={`
       text-${color.toLowerCase()} bg-${bgColor} w-${width} hover:bg-${bgHoverColor} font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800`}
