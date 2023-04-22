@@ -4,13 +4,15 @@ import SCALinks from "../../common/data/links.json"
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const userAvatarDropdownClass = "block px-4 py-2 text-sm text-gray-700 hover:bg-sky-500 hover:text-white";
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
   return (
-    <nav className="w-full bg-white border-gray-200 dark:bg-gray-900 shadow-md">
-      <div className="w-full bg-[#1da1f2] grid grid-cols-3 gap-4 p-4">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <div className="bg-[#1da1f2] grid grid-cols-3 gap-4 p-2 shadow-lg">
         <div className="col-span-2 flex justify-items-start">
           <a href="/" className="flex items-center">
             <img
@@ -21,16 +23,14 @@ const NavMenu = () => {
           </a>
 
           <div className="mt-1" id="mobile-menu-2">
-            <ul className="flex text-white md:p-0 border border-gray-100 md:flex-row md:space-x-8 md:border-0 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex text-white space-x-4">
               {SCALinks.navMenu.map((m, i) => {
                 return (
                   <li key={i}>
                     <a
                       href={m.url}
-                      className="text-white hover:underline"
-                      // className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                      className="text-white hover:underline text-sm"
                       aria-current="page"
-                      style={{ width: "100px" }}
                     >
                       {m.title}
                     </a>
@@ -44,13 +44,12 @@ const NavMenu = () => {
         <div className="flex justify-end">
           <button
             type="button"
-            className="text-sm bg-gray-400 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            className="text-sm bg-gray-400 rounded-full focus:ring-4 focus:ring-gray-300"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="user-dropdown"
             data-dropdown-placement="bottom"
-          >
-            <span className="sr-only">Open user menu</span>
+          > 
             <img
               className="w-8 h-8 rounded-full"
               src="https://www-test.scrapcatapp.com/images/user1.png"
@@ -60,47 +59,35 @@ const NavMenu = () => {
 
           {/* <!-- Dropdown menu --> */}
           <div
-            className="z-50 hidden my-4 text-base list-none divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+            className="z-50 hidden text-base list-none divide-y divide-gray-100 rounded-lg shadow bg-white"
             id="user-dropdown"
           >
             <div className="px-4 py-3">
               <span className="block text-sm text-gray-900 dark:text-white">
                 Lian Lagundimao
               </span>
-              <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
+              <span className="block text-sm  text-gray-400 truncate dark:text-gray-400">
                 llagundimao@gmail.com
               </span>
             </div>
             <ul className="py-2" aria-labelledby="user-menu-button">
               <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >
+                <a href="#" className={userAvatarDropdownClass}>
                   Dashboard
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >
+                <a href="#" className={userAvatarDropdownClass}>
                   Settings
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >
+                <a href="#" className={userAvatarDropdownClass}>
                   Earnings
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >
+                <a href="#" className={userAvatarDropdownClass}>
                   Sign out
                 </a>
               </li>
