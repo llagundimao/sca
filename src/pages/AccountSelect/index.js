@@ -12,8 +12,8 @@ const AccountSelect = () => {
         }
       `}</style>
       <MainLayout>
-        <div className="w-full relative flex flex-row justify-center items-center">
-          <div className="mt-8 bg-red-300">
+        <div className="w-full mt-20 relative flex flex-row justify-center items-center">
+          <div className="mt-10 max-[1200px]:hidden">
             <img
               src="https://www.scrapcatapp.com/images/SCA-Logo-YY%207%20-%20400px-white-brdr.png"
               style={{ width: "350px" }}
@@ -21,8 +21,8 @@ const AccountSelect = () => {
             />
           </div>
 
-          <div className="mt-8 w-1/2 min-w-xl flex justify-center  bg-yellow-500">
-            <div className="w-[20rem] p-4 bg-white border border-gray-200 rounded-md shadow">
+          <div className="mt-8 w-[26rem] min-w-xl flex justify-center z-50">
+            <div className="w-[21rem] p-4 bg-white border border-gray-200 rounded-md shadow">
               <div className="flex flex-col items-center">
                 <img
                   className="w-8 h-8 rounded-full mt-3"
@@ -30,7 +30,7 @@ const AccountSelect = () => {
                   alt="user photo"
                 />
                 <div className="flex items-center justify-between mt-3">
-                  <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
+                  <h5 className="text-xl leading-none text-gray-900 dark:text-white">
                     My Account
                   </h5>
                 </div>
